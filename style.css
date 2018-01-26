@@ -1,0 +1,220 @@
+.pagenum {
+  position: absolute;
+  right: 4px;
+  text-indent: 0em;
+  text-align: right;
+  font-size: 70%;
+  font-weight: normal;
+  font-variant: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  color: #acacac;
+  border: 1px solid #acacac;
+  background: #ffffff;
+  padding: 1px 2px;
+}
+
+table {
+  width:100%;
+}
+
+tr:hover {
+  background: white;
+}
+
+body {
+  font-family:sans-serif;
+  font-size:18px;
+  padding:5vh 10vw;
+  background: snow;
+  color:midnightblue;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin:0;
+}
+
+h1,h3,h5 {
+  font-family:"Georgia", serif;
+}
+
+h1 {
+  font-size:5rem;
+  line-height: 1.1;
+  margin:1em 0;
+
+}
+
+h1:before, h1:after {
+  position:absolute;
+  font-family:sans-serif;
+  mix-blend-mode: multiply;
+  color:coral;
+  font-size: 25rem;
+  opacity:.9;
+  animation-name: fadein;
+  animation-duration: 7s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+    h1:before {
+      content:"\2318";
+      right:15vw;
+      top:15vh;
+      animation-delay: -2500ms;
+    }
+
+    h1:after {
+      content:"P";
+      right:8vw;
+      top:35vh;
+    }
+
+    @keyframes fadein {
+      from {
+        transform: translateY(100px);
+      }
+
+      to {
+        transform: translateY(0px);
+
+      }
+    }
+
+
+
+h2 {
+  font-size:2.6rem;
+  margin: 0;
+  margin:1em 0;
+  color:coral;
+
+}
+
+h3 {
+  font-size:2.6rem;
+  color:coral;
+  margin:12em 0 1em 0;
+  font-weight: normal;
+
+}
+
+h4 {
+  font-size:1.3rem;
+  margin: .3em 0 1em 0;
+}
+
+h5 {
+  font-size:1rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  line-height: 1.3rem;
+  margin:1em 0 1em 0;
+}
+
+h6 {
+  font-size:.7rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color:coral;
+  display:inline-block;
+  margin:1em 0 0 0;
+  display: inline-block;
+}
+
+p,li {
+  line-height: 1.4;
+}
+
+p {
+  max-width: 30rem;
+}
+
+ul {
+
+}
+
+li {
+  font-size: .9rem;
+  max-width: 34rem;
+}
+
+a {
+  color:coral;
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
+
+a:hover {
+  color:coral;
+  border-bottom:
+}
+
+blockquote {
+  font-size: 2rem;
+  font-family: serif;
+  font-style: italic;
+  margin-top: 3rem;
+  color:coral;
+}
+
+blockquote:before {
+  content:"\201C";
+  /*https://www.evotech.net/articles/testjsentities.html*/
+  position: absolute;
+  margin-left:-3rem;
+  margin-top: -3rem;
+  font-size: 5rem;
+}
+
+blockquote:after {
+  content:"\201D";
+  /*https://www.evotech.net/articles/testjsentities.html*/
+  position: absolute;
+  margin-right:-3rem;
+  margin-top: 0rem;
+  font-size: 5rem;
+}
+
+li {
+  margin: 1rem 0 1rem 0;
+  padding-left: 1rem;
+}
+
+ul {
+  padding:2rem;
+}
+
+.highlight {
+  border-bottom: .5rem solid;
+  color:coral;
+}
+
+
+@media print {
+  body {
+    font-size: 12px;
+  }
+
+  body * {
+    color:grey!important;
+  }
+
+  h3 {
+    margin-top: 3em;
+    page-break-before: always;
+  }
+
+  h4 {
+    margin:0 0 .5rem 0;
+  }
+
+  h1:before, h1:after {
+    color:DimGray!important;
+  }
+
+
+}
