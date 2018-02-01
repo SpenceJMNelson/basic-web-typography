@@ -46,6 +46,18 @@ h1 {
 
 }
 
+  @keyframes drift {
+    from {
+      transform: translateY(100px);
+    }
+
+    to {
+      transform: translateY(0px);
+
+    }
+  }
+
+
 h1:before, h1:after {
   position:absolute;
   font-family:sans-serif;
@@ -53,7 +65,7 @@ h1:before, h1:after {
   color:coral;
   font-size: 25rem;
   opacity:.9;
-  animation-name: fadein;
+  animation-name: drift;
   animation-duration: 7s;
   animation-fill-mode: both;
   animation-iteration-count: infinite;
@@ -73,16 +85,6 @@ h1:before, h1:after {
       top:35vh;
     }
 
-    @keyframes fadein {
-      from {
-        transform: translateY(100px);
-      }
-
-      to {
-        transform: translateY(0px);
-
-      }
-    }
 
 
 
@@ -97,8 +99,11 @@ h2 {
 h3 {
   font-size:2.6rem;
   color:coral;
-  margin:12em 0 1em 0;
+  margin:0em 0 1em 0;
   font-weight: normal;
+  border-top: .1em solid;
+  padding-bottom: 1em;
+  display:inline-block;
 
 }
 
@@ -120,9 +125,9 @@ h6 {
   text-transform: uppercase;
   letter-spacing: .1rem;
   color:coral;
-  display:inline-block;
-  margin:1em 0 0 0;
-  display: inline-block;
+
+  margin:1em 0 1em 0;
+
 }
 
 p,li {
@@ -159,6 +164,8 @@ blockquote {
   font-style: italic;
   margin-top: 3rem;
   color:coral;
+  float:right;
+  width:66%;
 }
 
 blockquote:before {
@@ -191,6 +198,11 @@ ul {
 .highlight {
   border-bottom: .5rem solid;
   color:coral;
+}
+
+.chapter {
+  margin-top:24em;
+  margin-bottom:3em;
 }
 
 
