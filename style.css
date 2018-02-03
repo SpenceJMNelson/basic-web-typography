@@ -44,13 +44,24 @@ h1 {
 }
 
   @keyframes drift {
-    from {
+    0% {
       transform: translateY(100px);
     }
 
-    to {
+    100% {
       transform: translateY(0px);
+    }
+  }
 
+  @keyframes fade-in {
+    0% {
+      transform: translateY(100px);
+      opacity:0;
+    }
+
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
     }
   }
 
@@ -62,10 +73,11 @@ h1:before, h1:after {
   color:coral;
   font-size: 25rem;
   opacity:.9;
-  animation-name: drift;
+  animation-name: fade-in;
   animation-duration: 7s;
   animation-fill-mode: both;
   animation-iteration-count: infinite;
+  animation-delay: 1s;
   animation-direction: alternate;
 }
 
@@ -73,7 +85,6 @@ h1:before, h1:after {
       content:"\2318";
       right:15vw;
       top:15vh;
-      animation-delay: -2500ms;
     }
 
     h1:after {
